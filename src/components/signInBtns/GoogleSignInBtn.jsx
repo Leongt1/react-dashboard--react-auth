@@ -57,7 +57,7 @@ function GoogleSignInBtn() {
 
 	const logOut = () => {
 		googleLogout();
-		navigate("/signin");
+		navigate("/");
 	};
 
 	return (
