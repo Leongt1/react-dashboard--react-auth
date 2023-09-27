@@ -1,0 +1,20 @@
+@import '../../styles/variable.scss';
+@import '../../styles/mixins.scss';
+
+.addUser-btn {
+  border: none;
+  border-radius: 50%;
+  padding: 10px 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f2f2f2e1;
+  }
+}
+
+h3 {
+  font-family: $font-tree;
+  font-weight: 600;
+  font-size: 16px;
+  color: $text;
+}

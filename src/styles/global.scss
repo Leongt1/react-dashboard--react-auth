@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@import "./variable.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h3 {
+	font-family: "Poppins";
+}
+
+p,
+label,
+h4 {
+	font-family: "Lato";
+	font-weight: 400;
+}
+
+h1,
+h2,
+span,
+a {
+	font-family: "Montserrat";
+	font-weight: 700;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}

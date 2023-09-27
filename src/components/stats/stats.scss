@@ -1,0 +1,110 @@
+@import "../../styles/variable.scss";
+@import "../../styles/mixins.scss";
+
+.stats {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+
+	.card-item {
+		background-color: $color-white;
+		min-height: 120px;
+		border: 2px solid $border-color;
+		border-radius: 20px;
+		box-shadow: 3px 4px 11px 0px #62626226;
+		padding: 15px 22px;
+		display: flex;
+		flex-direction: column;
+    justify-content: space-between;
+		align-items: flex-start;
+		gap: 5px;
+
+		.revenue-icon {
+			border-radius: 50%;
+			padding: 6px;
+			min-width: 32px;
+			min-height: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #7fcd93;
+		}
+
+		.transaction-icon {
+			border-radius: 50%;
+			padding: 6px;
+			min-width: 32px;
+			min-height: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #debf85;
+
+		}
+
+		.like-icon {
+			border-radius: 50%;
+			padding: 6px;
+			min-width: 32px;
+			min-height: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #eca4a4;
+
+		}
+
+		.users-icon {
+			border-radius: 50%;
+			padding: 6px;
+			min-width: 32px;
+			min-height: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #a9b0e5;
+
+		}
+
+		.card-data {
+			display: flex;
+      min-width: 189px;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .data {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				gap: 5px;
+
+				h4 {
+					font-size: 11px;
+				}
+
+				span {
+					font-family: "Open Sans", "sans-serif";
+					font-size: 21px;
+					font-weight: 700;
+				}
+			}
+
+      .status {
+        min-width: 47px;
+        min-height: 24px;
+        background-color: #E9F9EB;
+        color: #4AD15F;
+        font-size: 10px;
+        font-weight: 600;
+        font-family: 'Figtree';
+        display: flex;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: center;
+				margin-right: 10px;
+      }
+		}
+	}
+}

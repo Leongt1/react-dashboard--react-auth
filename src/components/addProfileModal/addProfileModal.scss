@@ -1,0 +1,175 @@
+@import "../../styles/variable.scss";
+@import "../../styles/mixins.scss";
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  overflow: hidden;
+  
+	.modal-container {
+		position: fixed;
+		border-radius: 16px;
+		background-color: $color-white;
+		box-shadow: 10px 30px 30px 8px rgba(0, 0, 0, 0.1);
+		width: 544px;
+		// height: 553px;
+		border: 1px solid $text;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+		// overflow: hidden;
+
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 15px 24px;
+      border-bottom: 1px solid $outline-color;
+
+			h1 {
+				font-family: $font-tree;
+				font-weight: 600;
+				font-size: 20px;
+				cursor: default;
+			}
+
+			.close {
+				border: none;
+				background-color: $color-white;
+				cursor: pointer;
+				@include icon-size(32px, 32px);
+				padding: 2px;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&:hover {
+					background-color: rgba($color: #000000, $alpha: 0.1);
+				}
+
+				img {
+					@include icon-size(24px, 24px);
+				}
+			}
+		}
+
+		.form-page {
+			// background-color: rgba(230, 230, 78, 0.512);
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			.page-indicator {
+				// background-color: rgba(157, 214, 216, 0.556);
+				display: flex;
+				justify-content: space-around;
+				gap: 60px;
+        padding: 0 24px;
+				margin-right: 12px;
+
+				.page {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					height: 40px;
+
+					h2 {
+						font-family: $font-tree;
+						font-weight: 600;
+						font-size: 16px;
+					}
+
+					.active {
+						width: 100%;
+						height: 4px;
+						border-radius: 30px;
+						background-color: $bg-color;
+					}
+
+					.inactive {
+						width: 100%;
+						height: 4px;
+						border-radius: 30px;
+						background-color: $outline-color;
+					}
+				}
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+        justify-content: center;
+
+				p {
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+          padding: 0 24px;
+
+					label, input::placeholder, .optional {
+						font-family: $font-tree;
+						font-weight: 400;
+						font-size: 16px;
+
+					}
+					.optional {
+						color: #999CA0;
+					}
+
+					input {
+						border-radius: 8px;
+						border: 1px solid $outline-color;
+						padding: 14px;
+            font-size: 16px;
+            font-family: $font-tree;
+					}
+				}
+			}
+		}
+
+    .footer {
+      border-top: 1px solid $outline-color;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 24px 24px;
+			gap: 10px;
+
+      .btn {
+				font-family: $font-tree;
+        font-size: 14px;
+        color: $color-white;
+        background-color: #3E84F8;
+        @include icon-size(60px, 40px);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $link;
+        }
+      }
+
+			.back-btn {
+				border: 1px solid #999CA0;
+				background-color: transparent;
+				color: $color-black;
+
+				&:hover {
+					background-color: #999ca07a;
+				}
+			}
+    }
+	}
+}

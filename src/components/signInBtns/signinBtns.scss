@@ -1,0 +1,13 @@
+@import '../../styles/variable.scss';
+@import '../../styles/mixins.scss'; 
+
+.google-btn, .apple-btn {
+  border: none;
+  @include signin-btns();
+
+}
+
+.apple-btn {
+  color: $text;
+}
+

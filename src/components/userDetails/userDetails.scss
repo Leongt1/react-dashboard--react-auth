@@ -1,0 +1,56 @@
+@import '../../styles/variable.scss';
+@import '../../styles/mixins.scss';
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+
+  
+  h1 {
+    font-family: $font-tree;
+    font-weight: 600;
+    font-size: 24px;
+    width: 100%;
+    padding: 20px 0px 20px 10px;
+  }
+
+  .infos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 30px 10px 0 10px;
+    gap: 20px;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+        img {
+          @include icon-size(28px, 28px);
+        }
+
+        a {
+          font-weight: 400;
+          font-family: $font-tree;
+          font-size: 14px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
