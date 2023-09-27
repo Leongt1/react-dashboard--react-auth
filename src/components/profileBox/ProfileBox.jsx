@@ -41,7 +41,6 @@ const ProfileBox = () => {
 	return (
 		<div className="profile-card">
 
-
 			{
 				(userProfile)
 				? <UserDetails user={userProfile} setUserProfile={setUserProfile} /> 

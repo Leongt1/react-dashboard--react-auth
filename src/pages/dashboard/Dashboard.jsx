@@ -17,7 +17,7 @@ const Dashboard = () => {
 	const [userSigninData] = useState({
 		...location.state.decoded_token
 	});
-	console.log(userSigninData);
+	// console.log(userSigninData);
 
 	return (
 		<main>

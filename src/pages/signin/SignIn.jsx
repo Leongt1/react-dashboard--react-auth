@@ -10,7 +10,6 @@ import "./signin.scss";
 
 import GoogleSignInBtn from "../../components/signInBtns/GoogleSignInBtn";
 import AppleSignInBtn from "../../components/signInBtns/AppleSignInBtn";
-import GoogleSignInBtnCopy from "../../components/signInBtns/GoogleSignInBtn-copy";
 
 const SignIn = () => {
 	return (
@@ -32,8 +31,7 @@ const SignIn = () => {
 						<p>Sign in to your account</p>
 					</div>
 					<div className="signIn-btns">
-						{/* <GoogleSignInBtn /> */}
-						<GoogleSignInBtnCopy />
+						<GoogleSignInBtn />
 						<AppleSignInBtn />
 					</div>
 					<form className="form-container">

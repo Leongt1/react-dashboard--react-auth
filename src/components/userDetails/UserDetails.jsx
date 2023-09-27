@@ -7,9 +7,9 @@ const UserDetails = ({ user, setUserProfile }) => {
 		<div className="userDetails">
 			{user && user?.name !== "" && user?.email !== "" && user?.phone !== "" ? (
 				<>
-					<button onClick={() => setUserProfile("")}>
+					{/* <button onClick={() => setUserProfile("")}>
 						Reset
-					</button>
+					</button> */}
 					<h1>{user.name}</h1>
 					<div className="infos">
 						<div className="info">

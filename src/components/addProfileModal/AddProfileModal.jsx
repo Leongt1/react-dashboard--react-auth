@@ -54,7 +54,7 @@ const AddProfileModal = ({ setUserProfile, closeModal, submitUser }) => {
 		});
 		closeModal();
 	};
-	console.log(user);
+	// console.log(user);
 
 	const renderPageOne = (
 		<div className="form-page">
