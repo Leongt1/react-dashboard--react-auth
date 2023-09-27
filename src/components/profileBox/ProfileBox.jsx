@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./profileBox.scss";
 
-import AddProfileModal from "../addProfileModal/addProfileModal";
+import AddProfileModal from "../addProfileModal/AddProfileModal";
 import AddProfileBtn from "../addProfileBtn/AddProfileBtn";
 import UserDetails from "../userDetails/UserDetails";
 
