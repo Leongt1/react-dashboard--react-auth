@@ -1,5 +1,6 @@
 @import "../../styles/variable.scss";
 @import "../../styles/mixins.scss";
+@import "../../styles/responsive.scss";
 
 .overlay {
 	position: fixed;
@@ -19,12 +20,14 @@
 		background-color: $color-white;
 		box-shadow: 10px 30px 30px 8px rgba(0, 0, 0, 0.1);
 		width: 544px;
-		// height: 553px;
 		border: 1px solid $text;
     display: flex;
     flex-direction: column;
     gap: 24px;
-		// overflow: hidden;
+
+		@include sm {
+			width: 80%;
+		}
 
 		.header {
 			display: flex;

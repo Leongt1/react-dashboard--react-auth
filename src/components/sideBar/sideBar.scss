@@ -1,37 +1,63 @@
 @import '../../styles/variable.scss';
 @import '../../styles/mixins.scss';
+@import '../../styles/responsive.scss';
 
 .side-container {  
   height: 100%;
   width: 100%;
 
+  @include lg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  @include md {
+    padding: 0;
+  }
+
   h1 {
     font-size: $font-size-large;
     margin-bottom: 90px;
+
+    @include lg {
+      font-size: 30px;
+    }
+
+    @include md {
+      margin-bottom: 60px;
+      font-size: $font-size-large;
+    }
   }
 
   .main-opts {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 
-    button {
+    .side-btn {
       display: flex;
       align-items: center;
       gap: 20px;
-      padding: 1px;
+      padding: 10px;
       background-color: transparent;
-      border: none;
       color: inherit;
-      font-family: $font-montserrat;
-      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      
+      span {
+        font-family: $font-montserrat;
+        font-size: 18px;
+        font-weight: 400;
 
-      &:hover {
-        cursor: pointer;
-        border-radius: 10px;
-        // padding: 10px;
-        // background-color: rgba(255, 255, 255, 0.1);
-        font-weight: 700;
+        @include lg {
+          font-size: 14px;
+        }
+
+        @include sm {
+          font-size: 20px;
+        }
       }
     }
 
@@ -42,14 +68,26 @@
     }
   }
 }
+
 .other-opts {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  padding: 20px 10px;
+  gap: 30px;
+
+  @include md {
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
   a {
     font-size: 14px;
     font-weight: 400;
+
+    @include sm {
+      font-size: 15px;
+    }
 
     &:hover {
       font-weight: 700;

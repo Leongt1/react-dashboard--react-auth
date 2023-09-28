@@ -14,19 +14,26 @@ const Dashboard = () => {
 
 	const location = useLocation();
 
+	const [sideBarClass, setSideBarClass] = useState('sidebar-container hidden')
+	const [isOpen, setIsOpen] = useState(true);
+
 	const [userSigninData] = useState({
 		...location.state.decoded_token
 	});
 	// console.log(userSigninData);
 
+	const toggleHandler = (isClicked) => {
+		setIsOpen(isClicked);
+	}
+
 	return (
 		<main>
-			<aside className="sidebar-container">
+			<aside className={isOpen ? sideBarClass : 'sidebar-container'}>
 				<SideBar />
 			</aside>
 			<section className="dashboard-container">
 				<div className="item-1 item">
-					<NavBar userData={userSigninData} />
+					<NavBar userData={userSigninData} toggleHandler={toggleHandler}/>
 				</div>
 				<div className="item-2 item">
 					<Stats />

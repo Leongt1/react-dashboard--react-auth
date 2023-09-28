@@ -1,0 +1,53 @@
+@import '../../styles/variable.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/responsive.scss';
+
+.burger-btn {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  width: fit-content;
+  margin-right: 5px;
+  @include icon-size(30px, 30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  @include md {
+    display: inline-block;
+  }
+
+  #burger-icon {
+    @include icon-size(100%, 100%);
+    color: $link;
+
+    &:hover {
+      color: $button-color;
+    }
+  }
+
+  .open {
+    display: none;
+  }
+
+  .close {
+    display: none;
+  }
+
+  #close-icon {
+    @include icon-size(30px, 30px);
+    color: $color-white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: $color-ghostwhite;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+
+    &:hover {
+      color: $color-ghostwhite;
+    }
+  }
+}

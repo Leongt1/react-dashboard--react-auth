@@ -1,5 +1,6 @@
 @import '../../styles/variable.scss';
 @import '../../styles/mixins.scss';
+@import '../../styles/responsive.scss';
 
 .userDetails {
   display: flex;
@@ -9,13 +10,22 @@
   height: 100%;
   width: 100%;
 
+  @include md {
+		width: fit-content;
+	}
   
   h1 {
     font-family: $font-tree;
     font-weight: 600;
-    font-size: 24px;
+    font-size: $font-size-mid;
     width: 100%;
     padding: 20px 0px 20px 10px;
+
+    @include lg {
+      padding: 20px 10px;
+      padding-top: 0px;
+      font-size: 20px;
+    }
   }
 
   .infos {
@@ -26,6 +36,25 @@
     height: 100%;
     padding: 30px 10px 0 10px;
     gap: 20px;
+
+    @include xxl {
+      padding: 20px;
+    }
+
+    @include xl {
+      flex-direction: column;
+      overflow: scroll;
+      padding: 10px;
+    }
+
+    @include md {
+      flex-direction: row;
+      overflow: unset;
+    }
+
+    @include xs {
+      flex-direction: column;
+    }
 
     .info {
       display: flex;
@@ -42,6 +71,12 @@
 
         img {
           @include icon-size(28px, 28px);
+
+          @include xl {
+            @include icon-size(32px, 32px)
+          }
+
+          // @include
         }
 
         a {
@@ -49,6 +84,10 @@
           font-family: $font-tree;
           font-size: 14px;
           text-decoration: underline;
+
+          @include xl {
+            font-size: $font-size-base;
+          }
         }
       }
     }

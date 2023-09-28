@@ -6,25 +6,25 @@ const SideBar = () => {
 			<div className="side-container">
 				<h1>Board</h1>
 				<div className="main-opts">
-					<button className="list-item active">
+					<button className="side-btn active">
 						<img src="dashboard_icon.svg" alt="" />
-						Dashboard
+						<span>Dashboard</span>
 					</button>
-					<button className="list-item">
+					<button className="side-btn">
 						<img src="transaction_icon.svg" alt="" />
-						Transactions
+						<span>Transactions</span>
 					</button>
-					<button className="list-item">
+					<button className="side-btn">
 						<img src="schedule_icon.svg" alt="" />
-						Schedules
+						<span>Schedules</span>
 					</button>
-					<button className="list-item">
+					<button className="side-btn">
 						<img src="user_icon.svg" alt="" />
-						Users
+						<span>Users</span>
 					</button>
-					<button className="list-item">
+					<button className="side-btn">
 						<img src="setting_icon.svg" alt="" />
-						Settings
+						<span>Settings</span>
 					</button>
 				</div>
 			</div>

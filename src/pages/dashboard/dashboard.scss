@@ -1,15 +1,28 @@
 @import '../../styles/variable.scss';
 @import '../../styles/mixins.scss';
+@import '../../styles/responsive.scss';
 
 main {
   background-color: $color-ghostwhite;
   padding: 40px 43px;
-  // padding-right: 0;
-  min-width: $base-width;
-  min-height: $base-height;
+  width: $base-width;
+  height: fit-content;
   display: flex;
   gap: 50px;
 
+  @include lg {
+    gap: 30px;
+    padding: 20px;
+  }
+
+  @include md {
+    width: fit-content;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+
+  
   .sidebar-container {
     display: flex;
     flex-direction: column;
@@ -19,35 +32,97 @@ main {
     border-radius: 20px;
     padding: 40px 50px;
     justify-content: space-between;
+
+    @include xxl {
+      min-width: 280px;
+    }
+
+    @include lg {
+      min-width: 200px;
+    }
+
+    @include md {
+      display: flex;
+      position: fixed;
+      top: 80px;
+      z-index: 1;
+      height: 90vh;
+      width: 60%;
+      box-shadow: 5px 8px 20px rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+
+  .sidebar-container.hidden {
+    @include md {
+      display: none;
+    }
   }
 
   .dashboard-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: fit-content;
     height: 100%;
     gap: 30px;
-    flex-wrap: wrap;
-    margin: 10px 0;
+    margin: 20px 0;
+
+    @include xl {
+      width: max-content;
+    }
+
+    @include lg {
+      margin: 20px;
+      width: max-content;
+    }
+
+    @include xs {
+      width: fit-content;
+    }
 
     .inner-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 40px;
+      gap: 30px;
       height: 256px;
       width: 100%;
-      
+
+      @include md {
+        height: 100%;
+        flex-direction: column;
+      }
+
+      @include sm {
+        width: fit-content;
+      }
+
       .item-4 {
         flex: 1;
         height: 100%;
         width: 100%;
-       }
+
+        @include xl {
+          width: fit-content;          
+        }
+
+        @include md {
+          width: 100%;
+        }
+
+      }    
 
       .item-5 {
-        flex: 1;  
+        flex: 1;
         height: 100%;
         width: 100%;
+
+        @include xl {
+          width: fit-content;          
+        }
+
+        @include md {
+          width: max-content;
+        }
        }
     }
   }

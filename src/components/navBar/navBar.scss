@@ -1,66 +1,86 @@
-@import '../../styles/variable.scss';
-@import '../../styles/mixins.scss';
+@import "../../styles/variable.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/responsive.scss";
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
+	.navBar {
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+		gap: 10px;
 
-  .actions {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
+		.actions {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 10px;
 
-    .search-bar {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      background-color: $color-white;
-      border-radius: 10px;
-      justify-content: space-around;
-      
-      input {
-        height: 100%;
-        width: 145px;
-        border: none;
-        border-radius: 10px 0px 0 10px;
-        flex: 1;
-        outline: none;
-        margin-left: 10px;
-        padding-left: 5px;
+			@include sm {
+				gap: 0px;
+			}
 
-        &::placeholder {
-          font-size: 14px;
-          color: $text-light;
-        }
-      }
+			.search-bar {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				background-color: $color-white;
+				border-radius: 10px;
+				justify-content: space-around;
 
-      button {
-        border: none;
-        background-color: transparent;
-        
-        .search-icon {
-          @include icon-size(12px, 12px);
-          margin-right: 30px;
-          // padding: 10px;
-          // border-radius: 0 10px 10px 0;
-          cursor: pointer;
-        }
-      }
-    }
+				input {
+					height: 100%;
+					width: 145px;
+					border: none;
+					border-radius: 10px 0px 0 10px;
+					flex: 1;
+					outline: none;
+					margin-left: 10px;
+					padding-left: 5px;
 
-    .notification-icon {
-      cursor: pointer;
-      margin: 0 7px;
-      @include icon-size(18px, 20.89px);
-    }
+					@include xs {
+						width: 80px;
+						margin-left: 0;
+					}
 
-    .user-icon {
-      border-radius: 50%;
-      cursor: pointer;
-      margin-left: 10px;
-      @include icon-size(30px, 30px);
-    }
+					&::placeholder {
+						font-size: 14px;
+						color: $text-light;
+					}
+				}
+
+				button {
+					border: none;
+					background-color: transparent;
+
+					.search-icon {
+						@include icon-size(12px, 12px);
+						margin-right: 30px;
+						cursor: pointer;
+
+						@include sm {
+							margin: 0 10px;
+						}
+					}
+				}
+			}
+
+			.notification-icon {
+				cursor: pointer;
+				margin: 0 7px;
+				@include icon-size(18px, 20.89px);
+			}
+
+			.user-icon {
+				border-radius: 50%;
+				cursor: pointer;
+				margin-left: 10px;
+				@include icon-size(30px, 30px);
+			}
+		}
+	}
+
+  #mobile {
+
   }
 }

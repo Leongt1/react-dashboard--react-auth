@@ -1,14 +1,22 @@
-$sm: 480px;
-$md: 768px;
+$xs: 420px;
+$sm: 540px;
+$md: 720px;
 $lg: 1024px;
 $xl: 1200px;
-$xxl: 1400px;
+$xxl: 1440px;
+
+@mixin xs {
+  @media screen and (max-width: ($xs)) {
+    @content;
+  }
+}
 
 @mixin sm {
   @media screen and (max-width: ($sm)) {
     @content;
   }
 }
+
 @mixin md {
   @media screen and (max-width: ($md)) {
     @content;
