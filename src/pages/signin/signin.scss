@@ -84,20 +84,40 @@
 			justify-content: space-between;
 			align-items: center;
 
+			@include xs {
+				padding: 10px
+			}
+
 			.git-icon {
 				@include icon-size(44px, 44px);
+
+				@include xs {
+					@include icon-size(34px, 34px)
+				}
 			}
 
 			.twitter-icon {
 				@include icon-size(42px, 41px);
+
+				@include xs {
+					@include icon-size(34px, 34px)
+				}
 			}
 
 			.linkedIn-icon {
 				@include icon-size(48px, 48px);
+
+				@include xs {
+					@include icon-size(34px, 34px)
+				}
 			}
 
 			.discord-icon {
 				@include icon-size(50px, 48px);
+
+				@include xs {
+					@include icon-size(34px, 34px)
+				}
 			}
 
 			.icon {
@@ -132,16 +152,36 @@
 			height: fit-content;
 			width: fit-content;
 
+			@include lg {
+				// width:;
+			}
+
 			@include md {
-				width: 100%;
+				padding: 10px;
+				width: min-content;
 			}
 
 			.header {
+
+				@include lg {
+					text-align: center;
+					margin-bottom: 20px;
+				}
+
+				@include md {
+					text-align: start;
+					margin-bottom: 10px;
+				}
+
+				@include sm {
+					text-align: center;
+				}
+
 				> h1 {
 					font-size: $font-size-large;
 
-					@include lg {
-						font-size: $font-size-mid;
+					@include sm {
+						font-size: 30px;
 					}
 				}
 				> p {
@@ -149,6 +189,10 @@
 
 					@include lg {
 						font-size: $font-size-small;
+					}
+
+					@include sm {
+						font-size: 15px;
 					}
 				}
 			}
@@ -166,8 +210,19 @@
 				}
 
 				@include lg {
+					width: 100%;
+					justify-content: space-around;
+					align-items: center;
+					flex-direction: row;
+				}
+
+				@include md {
 					align-items: center;
 					gap: 10px;
+					flex-direction: row;
+				}
+
+				@include xs {
 					flex-direction: column;
 				}
 			}
@@ -182,12 +237,24 @@
 				border-radius: 20px;
 				padding: 30px;
 
-				@include xl {
+				@include sm {
 					width: 100%;
+					height: max-content;
+					gap: 20px;
+				}
+
+				@include xs {
+					align-items: flex-start;
+					justify-content: center;
+					width: fit-content;
 				}
 
 				// div {
 				div {
+					@include sm {
+						width: max-content;
+					}
+
 					label {
 						display: block;
 						margin-bottom: 10px;
