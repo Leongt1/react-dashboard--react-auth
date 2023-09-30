@@ -75,6 +75,10 @@ main {
       width: max-content;
     }
 
+    @include md {
+      margin: 0;
+    }
+
     @include xs {
       width: fit-content;
     }

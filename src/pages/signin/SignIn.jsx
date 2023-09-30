@@ -16,7 +16,10 @@ const SignIn = () => {
 		<div className="main-container">
 			<section className="left">
 				<h3 className="logo">LOGO</h3>
-				<h1>Board.</h1>
+				<div className="title">
+					<h1>Board.</h1>
+					<a href="#signin">Singin Now! ↓</a>
+				</div>
 				<div className="icon-links">
 						<AiFillGithub className="git-icon icon" />
 						<AiFillTwitterCircle className="twitter-icon icon" />
@@ -25,7 +28,7 @@ const SignIn = () => {
 				</div>
 			</section>
 			<section className="right">
-				<div className="container">
+				<div className="container" id="signin">
 					<div className="header">
 						<h1>Sign In</h1>
 						<p>Sign in to your account</p>
